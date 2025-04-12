@@ -37,7 +37,7 @@ const Header = () => {
   }, [activeIndex]);
   return (
     <>
-      <header className="relative w-full bg-[#12375c] h-[103px] ">
+      <header className="relative w-full bg-[#12375c] h-[103px]">
         <div className="relative w-full max-w-[1440px] mx-auto">
           <div className="flex justify-between items-center">
             <div className="ml-[40px]">
@@ -75,7 +75,7 @@ const Header = () => {
               >
                 {/* Animated underline */}
                 <motion.div
-                  className="absolute top-0 h-[4px] bg-white "
+                  className="absolute top-0 h-[4px] bg-white rounded"
                   animate={underlineStyle}
                   transition={{ type: "spring", stiffness: 300, damping: 25 }}
                   style={{ position: "absolute" }}
