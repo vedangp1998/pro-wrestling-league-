@@ -46,17 +46,18 @@ const HomePage = () => {
   };
   return (
     <>
-      <div className="w-full  m-auto bg-black h-[756px] flex items-center justify-center overflow-hidden">
+      <div className="w-full  m-auto  h-[756px] flex items-center justify-center overflow-hidden">
         <Image
           src={HeroImage}
           alt="Hero-Image"
-          className="w-full h-[756px] object-fit"
+          className="w-[1440px] h-[756px] object-fit"
           priority
         />
       </div>
 
       <div className="w-full h-[0px] flex items-center justify-center bg-black">
         <div className="relative max-w-[1440px] w-full h-[450px] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/100 via-black/95 to-black/100 z-0 pointer-events-none" />
           {images.map((src, index) => {
             const positionClass = getPositionClass(index);
 
@@ -100,6 +101,8 @@ const HomePage = () => {
           })}
         </div>
       </div>
+
+      <div className="w-[1440px] h-[131px] bg-gradient-to-b from-black/20 to-black mx-auto relative mt-[-80px] z-1"></div>
     </>
   );
 };
