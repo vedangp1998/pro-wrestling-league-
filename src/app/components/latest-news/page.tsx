@@ -50,12 +50,14 @@ const LatestNews = () => {
     <>
       <div className="max-w-[1440px] w-full mx-auto px-4 sm:px-6 md:px-16 py-8 bg-[#edeff4] flex flex-col lg:flex-row gap-6">
         <div className="max-w-[770px] w-full mx-auto space-y-6">
-          <div className="relative bg-white h-[56px] rounded-[5px] flex flex-col sm:flex-row items-center justify-between overflow-hidden text-center sm:text-left">
+          <div className="relative bg-white h-auto sm:h-[56px] rounded-[5px] flex flex-col sm:flex-row items-center justify-between overflow-hidden text-center sm:text-left w-full">
             <div className="absolute left-0 top-0 h-full w-[13px] bg-[#12375C] rounded-l-[5px]" />
-            <div className="text-[20px] sm:text-[24px] text-[#12375C] font-semibold ml-4 sm:ml-8">
+
+            <div className="w-full sm:w-auto text-[20px] sm:text-[24px] text-[#12375C] font-semibold ml-0 sm:ml-8 mt-2 sm:mt-0">
               PWL Season 4 2025 Latest News
             </div>
-            <div className="flex justify-between items-center gap-3 sm:gap-6 pr-2 sm:pr-4 text-[16px] sm:text-[20px] mt-2 sm:mt-0">
+
+            <div className="flex justify-center sm:justify-between items-center gap-3 sm:gap-6 w-full sm:w-auto px-2 sm:pr-4 text-[16px] sm:text-[20px] mt-2 sm:mt-0">
               <div className="text-[#000000]">Newest</div>
               <div className="text-[#8D8D8D]">Popular</div>
               <div className="text-[#8D8D8D]">View All</div>
@@ -149,23 +151,29 @@ const LatestNews = () => {
                 </div>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-10">
-                <div className="flex flex-col items-center justify-center">
-                  <Image src={Team1} alt="img" width={99} height={99} />
-                  <div className="text-[12px] text-[#12375C] font-semibold text-center">
+                <div className="flex flex-col items-center justify-center w-[117px] sm:w-[80px] lg:w-[99px]">
+                  <Image src={Team1} alt="img" className="w-full h-auto" />
+                  <div className="text-[12px] text-[#12375C] font-semibold text-center mt-2 break-words">
                     NCR Punjab Royals
                   </div>
                 </div>
+
                 <div className="flex flex-col items-center justify-center">
-                  <div className="text-[20px] sm:text-[24px] text-[#000000] font-bold">
+                  <div className="text-[16px] sm:text-[20px] text-[#000000] font-bold">
                     VS
                   </div>
-                  <div className="text-[14px] text-[#8d8d8d]">8:00 Pm</div>
-                  <div className="text-[14px] text-[#8d8d8d]">Madison Club</div>
+                  <div className="text-[12px] sm:text-[14px] text-[#8d8d8d]">
+                    8:00 PM
+                  </div>
+                  <div className="text-[12px] sm:text-[14px] text-[#8d8d8d]">
+                    Madison Club
+                  </div>
                 </div>
-                <div className="flex flex-col items-center justify-center">
-                  <Image src={Team2} alt="img" width={99} height={99} />
-                  <div className="text-[12px] text-[#12375C] font-semibold text-center">
-                    NCR Punjab Royals
+
+                <div className="flex flex-col items-center justify-center w-[117px] sm:w-[80px] lg:w-[99px]">
+                  <Image src={Team2} alt="img" className="w-full h-auto" />
+                  <div className="text-[12px] text-[#12375C] font-semibold text-center mt-2 break-words">
+                    Delhi Sultans{" "}
                   </div>
                 </div>
               </div>
@@ -180,23 +188,29 @@ const LatestNews = () => {
                 </div>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-10">
-                <div className="flex flex-col items-center justify-center">
-                  <Image src={Team1} alt="img" width={99} height={99} />
-                  <div className="text-[12px] text-[#12375C] font-semibold text-center">
+                <div className="flex flex-col items-center justify-center w-[117px] sm:w-[80px] lg:w-[99px]">
+                  <Image src={Team1} alt="img" className="w-full h-auto" />
+                  <div className="text-[12px] text-[#12375C] font-semibold text-center mt-2 break-words">
                     NCR Punjab Royals
                   </div>
                 </div>
+
                 <div className="flex flex-col items-center justify-center">
-                  <div className="text-[20px] sm:text-[24px] text-[#000000] font-bold">
+                  <div className="text-[16px] sm:text-[20px] text-[#000000] font-bold">
                     VS
                   </div>
-                  <div className="text-[14px] text-[#8d8d8d]">8:00 Pm</div>
-                  <div className="text-[14px] text-[#8d8d8d]">Madison Club</div>
+                  <div className="text-[12px] sm:text-[14px] text-[#8d8d8d]">
+                    8:00 PM
+                  </div>
+                  <div className="text-[12px] sm:text-[14px] text-[#8d8d8d]">
+                    Madison Club
+                  </div>
                 </div>
-                <div className="flex flex-col items-center justify-center">
-                  <Image src={Team2} alt="img" width={99} height={99} />
-                  <div className="text-[12px] text-[#12375C] font-semibold text-center">
-                    NCR Punjab Royals
+
+                <div className="flex flex-col items-center justify-center w-[117px] sm:w-[80px] lg:w-[99px]">
+                  <Image src={Team2} alt="img" className="w-full h-auto" />
+                  <div className="text-[12px] text-[#12375C] font-semibold text-center mt-2 break-words">
+                    Delhi Sultans{" "}
                   </div>
                 </div>
               </div>
