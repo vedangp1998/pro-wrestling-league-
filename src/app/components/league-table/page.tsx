@@ -1,17 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import BackgroundFullImage from "../assets/Image/Full-Hero-Image.jpeg";
-import Logo1 from "../assets/Icons/Teams/Punjab Royals NCR Logo copy 2.svg";
-import Logo2 from "../assets/Icons/Teams/HARYANA HAMMERS 1.svg";
-import Logo3 from "../assets/Icons/Teams/mp-yodha.svg";
-import Logo4 from "../assets/Icons/Teams/UP DANGAL 1.svg";
-import Logo5 from "../assets/Icons/Teams/Colors-Delhi-Sultan-Logo 1.svg";
-import Logo6 from "../assets/Icons/Teams/Mumbai Maharathi 1.svg";
+import BackgroundFullImage from "../../assets/Image/Full-Hero-Image.jpeg";
+import Logo1 from "../../assets/Icons/Teams/Punjab Royals NCR Logo copy 2.svg";
+import Logo2 from "../../assets/Icons/Teams/HARYANA HAMMERS 1.svg";
+import Logo3 from "../../assets/Icons/Teams/mp-yodha.svg";
+import Logo4 from "../../assets/Icons/Teams/UP DANGAL 1.svg";
+import Logo5 from "../../assets/Icons/Teams/Colors-Delhi-Sultan-Logo 1.svg";
+import Logo6 from "../../assets/Icons/Teams/Mumbai Maharathi 1.svg";
 
-import Image1 from "../assets/Image/card-images/USATSI_23517759 4.svg";
-import Image2 from "../assets/Image/card-images/USATSI_23517759 5.svg";
-import PlayIcon from "../assets/Icons/Play.svg";
+import Image1 from "../../assets/Image/card-images/USATSI_23517759 4.svg";
+import Image2 from "../../assets/Image/card-images/USATSI_23517759 5.svg";
+import PlayIcon from "../../assets/Icons/Play.svg";
 
 export default function LeagueTable() {
   const teams = [

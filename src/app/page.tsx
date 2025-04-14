@@ -1,6 +1,6 @@
 import HomePage from "./home/page";
-import LeagueTable from "./league-table/page";
-import LatestNews from "./latest-news/page";
+import LeagueTable from "./components/league-table/page";
+import LatestNews from "./components/latest-news/page";
 
 export default function Home() {
   return (

@@ -1,13 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import Image1 from "../assets/Image/news-image/USATSI_23517759 8.png";
-import Image2 from "../assets/Image/news-image/Rectangle 186.svg";
-import Image3 from "../assets/Image/news-image/Rectangle 187.svg";
-import Banner from "../assets/Image/Banner-3.svg";
-import Team1 from "../assets/Icons/Teams/Punjab Royals NCR Logo copy 2.svg";
-import Team2 from "../assets/Icons/Teams/Colors-Delhi-Sultan-Logo 1.svg";
-import Social1 from "../assets/Logos/Facebook.svg";
-import Social2 from "../assets/Logos/Twitter.svg";
+import Image1 from "../../assets/Image/news-image/USATSI_23517759 8.png";
+import Image2 from "../../assets/Image/news-image/Rectangle 186.svg";
+import Image3 from "../../assets/Image/news-image/Rectangle 187.svg";
+import Banner from "../../assets/Image/Banner-3.svg";
+import Team1 from "../../assets/Icons/Teams/Punjab Royals NCR Logo copy 2.svg";
+import Team2 from "../../assets/Icons/Teams/Colors-Delhi-Sultan-Logo 1.svg";
+import Social1 from "../../assets/Logos/Facebook.svg";
+import Social2 from "../../assets/Logos/Twitter.svg";
 import { ArrowRight } from "lucide-react";
 
 const cardData = [
