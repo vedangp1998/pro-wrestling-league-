@@ -166,14 +166,13 @@ export default function LeagueTable() {
     <>
       <div className="relative w-full max-w-[1440px] m-auto bg-black min-h-[741px] h-[auto] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-0 py-8">
         <div className="absolute top-0 left-0 w-full h-full z-0">
-          <div className="w-full h-full bg-gradient-to-b from-black to-[#123B59] opacity-90 absolute " />
-
+          <div className="w-full h-full bg-gradient-to-b from-black via-[#123B59] to-black opacity-90 absolute" />
           <Image
             src={BackgroundFullImage}
             alt="Background"
             layout="full"
             objectFit="cover"
-            className="z-[-1] mt-[50px]"
+            className="z-[-1] mt-[120px]"
           />
         </div>
 
@@ -181,7 +180,7 @@ export default function LeagueTable() {
           {/* Top Half */}
           <div className="relative z-10 w-full max-w-[1440px] px-2 sm:px-0 lg:px-0 mx-auto mt-6 border-b-2 border-[#C4C4C4] ">
             {/* Header */}
-            <div className="flex justify-center mb-0 mt-0">
+            <div className="flex justify-center mb-0 mt-12">
               <div className="trapezoid-header relative w-full max-w-[361px] h-12 flex items-center justify-center text-white font-bold text-sm sm:text-lg">
                 PWL Season 4 League Table
               </div>
@@ -340,11 +339,12 @@ export default function LeagueTable() {
 
           {/* Bottom Half */}
 
-          <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-[1440px] px-12 sm:px-4 lg:pl-[70px] mt-[120px]">
+          <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-[1440px] px-12 sm:px-4 lg:pl-[70px] mt-[120px] pb-14">
             <div>
-              <div className="text-[18px] text-white bg-[#C72200] rounded-tr-[16px] rounded-tl-[16px] w-[259px] h-[57px] flex items-center justify-center mx-auto">
+              <div className="text-[clamp(14px,4vw,18px)] text-white bg-[#C72200] rounded-tr-[16px] rounded-tl-[16px] w-[90%] max-w-[259px] h-[57px] flex items-center justify-center mx-auto px-4 text-center">
                 PWL Season 4 League Results
               </div>
+
               <div className="bg-[#11AAA7] w-full max-w-[472px] h-[586px] rounded-[13px] p-6">
                 <div className="flex flex-col gap-3 max-h-[496px] overflow-y-auto scroll-smooth pr-2 custom-scrollbar">
                   {cardData.map((card, index) => (
@@ -353,9 +353,10 @@ export default function LeagueTable() {
                         className={`${card.cardBg} w-full max-w-[399px] h-auto rounded-[13px] shadow-lg flex items-center justify-between p-2`}
                       >
                         <div className="flex items-center justify-center m-auto ml-5">
-                          <div className="flex flex-col items-start justify-center gap-1">
-                            <div className="flex items-center gap-4 w-full">
-                              <div className="w-[38px] h-[38px] flex-shrink-0">
+                          <div className="flex flex-col items-start justify-center gap-1 w-full max-w-[230px]">
+                            {/* Top Team */}
+                            <div className="flex items-center gap-3 sm:gap-4 w-full">
+                              <div className="w-[32px] h-[32px] sm:w-[38px] sm:h-[38px] flex-shrink-0">
                                 <Image
                                   src={Logo1}
                                   alt="icon"
@@ -363,16 +364,20 @@ export default function LeagueTable() {
                                   height={38}
                                 />
                               </div>
-                              <div className="text-[#12375C] text-[16px] leading-[1.2] font-bold">
+                              <div className="text-[#12375C] font-bold leading-[1.2] text-[clamp(12px,3.5vw,16px)]">
                                 {card.topTeam}
                               </div>
                             </div>
+
+                            {/* Divider Line */}
                             <div
-                              className="w-[230px] h-[1px]"
+                              className="w-full h-[1px]"
                               style={{ backgroundColor: card.dividerColor }}
                             ></div>
-                            <div className="flex items-center gap-4 w-full">
-                              <div className="w-[38px] h-[38px] flex-shrink-0">
+
+                            {/* Bottom Team */}
+                            <div className="flex items-center gap-3 sm:gap-4 w-full">
+                              <div className="w-[32px] h-[32px] sm:w-[38px] sm:h-[38px] flex-shrink-0">
                                 <Image
                                   src={Logo2}
                                   alt="icon"
@@ -380,20 +385,23 @@ export default function LeagueTable() {
                                   height={38}
                                 />
                               </div>
-                              <div className="text-[#12375C] text-[16px] leading-[1.2] font-bold">
+                              <div className="text-[#12375C] font-bold leading-[1.2] text-[clamp(12px,3.5vw,16px)]">
                                 {card.bottomTeam}
                               </div>
                             </div>
                           </div>
+
                           <div
-                            className="w-[134px] h-[103px] flex items-center justify-center rounded-[13px] text-white"
+                            className="w-full max-w-[134px] h-[103px] sm:w-[134px] sm:h-[103px] flex items-center justify-center rounded-[13px] text-white"
                             style={{ backgroundColor: card.scoreBg }}
                           >
-                            <div className="flex flex-col items-center justify-center gap-2">
-                              <div className="text-[16px]">
+                            <div className="flex flex-col items-center justify-center gap-1 sm:gap-2">
+                              <div className="text-[clamp(12px,2.5vw,16px)] font-medium text-center">
                                 {card.matchType}
                               </div>
-                              <div className="text-[26px]">{card.score}</div>
+                              <div className="text-[clamp(20px,5vw,26px)] font-semibold text-center">
+                                {card.score}
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -436,11 +444,14 @@ export default function LeagueTable() {
               </div>
             </div>
 
-            <div className="bg-white w-full max-w-[797px] p-8 rounded-[19px] h-[586px] shadow-lg mx-auto mt-[60px] lg:ml-[24px]">
-              <div className="text-[24px] text-[#12375C] font-semibold flex items-center justify-center">
+            <div className="bg-white w-full max-w-[797px] p-8 rounded-[19px] h-[586px] shadow-lg mx-auto mt-[60px] lg:ml-[24px] flex flex-col">
+              {/* Title */}
+              <div className="text-[24px] text-[#12375C] font-semibold flex items-center justify-center text-center">
                 Watch Season 4 Highlights
               </div>
-              <div className="flex items-center gap-8 mt-4 mb-6 justify-center">
+
+              {/* Tabs */}
+              <div className="flex flex-wrap items-center gap-4 mt-4 mb-6 justify-center">
                 <div className="bg-[#C72200] w-[134px] h-[38px] flex items-center justify-center rounded-[29px] text-[16px] text-white">
                   Latest
                 </div>
@@ -451,37 +462,43 @@ export default function LeagueTable() {
                   Season 2
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                {[Image2, Image1, Image2, Image1].map((imgSrc, idx) => (
-                  <div
-                    className="relative rounded-[12px] overflow-hidden"
-                    key={idx}
-                  >
-                    <Image
-                      src={imgSrc}
-                      width={365}
-                      height={181}
-                      alt="Sarita vs Geeta wrestling match"
-                      className="w-full h-auto object-cover"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="bg-[rgba(235,234,234,0.61)] rounded-full w-[34px] h-[34px] m-auto flex items-center justify-center cursor-pointer">
-                        <Image
-                          src={PlayIcon}
-                          alt="icon"
-                          width={13}
-                          height={13}
-                        />
+
+              {/* Scrollable Image Grid */}
+              <div className="overflow-y-auto flex-1 mb-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[Image2, Image1, Image2, Image1].map((imgSrc, idx) => (
+                    <div
+                      className="relative rounded-[12px] overflow-hidden"
+                      key={idx}
+                    >
+                      <Image
+                        src={imgSrc}
+                        alt="Sarita vs Geeta wrestling match"
+                        className="w-full h-auto object-cover"
+                        width={365}
+                        height={181}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="bg-[rgba(235,234,234,0.61)] rounded-full w-[34px] h-[34px] m-auto flex items-center justify-center cursor-pointer">
+                          <Image
+                            src={PlayIcon}
+                            alt="icon"
+                            width={13}
+                            height={13}
+                          />
+                        </div>
+                      </div>
+                      <div className="absolute bottom-0 left-6">
+                        <div className="trapezoid-footer bg-red-600 text-white text-[12px] w-[152px] h-[30px] flex items-center justify-center">
+                          Sarita vs Geeta
+                        </div>
                       </div>
                     </div>
-                    <div className="absolute bottom-0 left-6">
-                      <div className="trapezoid-footer bg-red-600 text-white text-[12px] w-[152px] h-[30px] flex items-center justify-center">
-                        Sarita vs Geeta
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
+
+              {/* View More */}
               <div className="text-[#616161] text-[16px] flex items-center justify-center font-semibold cursor-pointer">
                 View More
               </div>

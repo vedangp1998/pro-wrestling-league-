@@ -3,6 +3,8 @@
 import Image from "next/image";
 import HeroImage from "../assets/Image/Hero.svg";
 import Slider from "./Slider";
+import LeagueTable from "../components/league-table/page";
+import LatestNews from "../components/latest-news/page";
 
 const HomePage = () => {
   return (
@@ -14,11 +16,12 @@ const HomePage = () => {
           className="object-cover h-auto max-h-[600px]"
           priority
         />
-
         <div className="absolute bottom-[-8%] w-full z-100">
           <Slider />
         </div>
       </div>
+      <LeagueTable />
+      <LatestNews />
     </>
   );
 };
