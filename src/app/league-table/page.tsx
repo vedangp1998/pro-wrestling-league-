@@ -340,13 +340,13 @@ export default function LeagueTable() {
 
           {/* Bottom Half */}
 
-          <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-[1442px] px-12 sm:px-4 lg:pl-[70px] mt-[120px]">
+          <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-[1440px] px-12 sm:px-4 lg:pl-[70px] mt-[120px]">
             <div>
               <div className="text-[18px] text-white bg-[#C72200] rounded-tr-[16px] rounded-tl-[16px] w-[259px] h-[57px] flex items-center justify-center mx-auto">
                 PWL Season 4 League Results
               </div>
               <div className="bg-[#11AAA7] w-full max-w-[472px] h-[586px] rounded-[13px] p-6">
-                <div className="flex flex-col gap-3 max-h-[496px] overflow-y-auto scroll-smooth pr-1 custom-scrollbar">
+                <div className="flex flex-col gap-3 max-h-[496px] overflow-y-auto scroll-smooth pr-2 custom-scrollbar">
                   {cardData.map((card, index) => (
                     <div className="relative" key={index}>
                       <div
@@ -436,7 +436,7 @@ export default function LeagueTable() {
               </div>
             </div>
 
-            <div className="bg-white w-full max-w-[797px] p-8 rounded-[19px] h-[586px] shadow-lg mx-auto mt-[60px]">
+            <div className="bg-white w-full max-w-[797px] p-8 rounded-[19px] h-[586px] shadow-lg mx-auto mt-[60px] lg:ml-[24px]">
               <div className="text-[24px] text-[#12375C] font-semibold flex items-center justify-center">
                 Watch Season 4 Highlights
               </div>

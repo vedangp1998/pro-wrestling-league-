@@ -12,28 +12,28 @@ export default function Footer() {
             <div className="flex space-x-3 mb-4">
               <Link
                 href="#"
-                className="bg-red-600 rounded-full p-2 hover:bg-red-700 transition-colors"
+                className="bg-[#C72200] rounded-full p-2 hover:bg-red-700 transition-colors"
               >
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
                 href="#"
-                className="bg-red-600 rounded-full p-2 hover:bg-red-700 transition-colors"
+                className="bg-[#C72200] rounded-full p-2 hover:bg-red-700 transition-colors"
               >
                 <Phone size={20} />
                 <span className="sr-only">WhatsApp</span>
               </Link>
               <Link
                 href="#"
-                className="bg-red-600 rounded-full p-2 hover:bg-red-700 transition-colors"
+                className="bg-[#C72200] rounded-full p-2 hover:bg-red-700 transition-colors"
               >
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
                 href="#"
-                className="bg-red-600 rounded-full p-2 hover:bg-red-700 transition-colors"
+                className="bg-[#C72200] rounded-full p-2 hover:bg-red-700 transition-colors"
               >
                 <Twitter size={20} />
                 <span className="sr-only">Twitter</span>

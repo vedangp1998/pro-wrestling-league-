@@ -102,7 +102,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="w-[1440px] h-[131px] bg-gradient-to-b from-black/20 to-black mx-auto relative mt-[-80px] z-1"></div>
+      <div className="w-full max-w-screen-xl h-[131px] bg-gradient-to-b from-black/20 to-black mx-auto relative -mt-20 z-[1]"></div>
     </>
   );
 };
