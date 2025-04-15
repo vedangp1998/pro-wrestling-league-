@@ -55,7 +55,7 @@ const Slider = () => {
   return (
     <div className="w-full flex items-center justify-center">
       <div className="relative w-full max-w-[1440px] h-[120px] sm:h-[160px] md:h-[180px] lg:h-[200px] xl:h-[220px] flex items-center justify-center overflow-hidden z-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/90 pointer-events-none z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/95 pointer-events-none z-0" />
 
         {/* Slide Images */}
         {images.map((src, index) => {

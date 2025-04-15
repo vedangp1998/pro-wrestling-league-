@@ -9,17 +9,19 @@ import LatestNews from "../components/latest-news/page";
 const HomePage = () => {
   return (
     <>
-      <div className="relative w-full m-auto h-auto flex items-center justify-center overflow-hidden z-0">
+      <div className="relative w-full max-h-[600px] h-[600px] overflow-hidden z-0">
         <Image
           src={HeroImage}
           alt="Hero-Image"
-          className="object-cover h-auto max-h-[600px]"
+          className="object-cover w-full h-full"
           priority
         />
-        <div className="absolute bottom-[-8%] w-full z-100">
+
+        <div className="absolute bottom-[-20px] w-full px-4 z-10">
           <Slider />
         </div>
       </div>
+
       <LeagueTable />
       <LatestNews />
     </>
