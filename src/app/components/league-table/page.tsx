@@ -460,20 +460,20 @@ export default function LeagueTable() {
 
           {/* Bottom Half */}
 
-          <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-[1440px] px-12 sm:px-4 lg:pl-[70px] mt-[120px] pb-14">
+          <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-[1440px] px-12 sm:px-4 lg:pl-[70px] mt-10 sm:mt-14 md:mt-12 lg:mt-20 xl:mt-[80px] pb-14">
             <div>
-              <div className="text-[clamp(14px,4vw,18px)] text-white bg-[#C72200] rounded-tr-[16px] rounded-tl-[16px] w-[90%] max-w-[259px] h-[57px] flex items-center justify-center mx-auto px-4 text-center">
+              <div className="text-[clamp(12px,3.5vw,18px)] text-white bg-[#C72200] rounded-tr-[16px] rounded-tl-[16px] w-[90%] sm:w-[60%] md:w-[70%] lg:w-[70%] max-w-[300px] h-[50px] sm:h-[57px] flex items-center justify-center mx-auto px-4 text-center">
                 PWL Season 4 League Results
               </div>
 
-              <div className="bg-[#11AAA7] w-full max-w-[472px] h-[586px] rounded-[13px] p-6">
+              <div className="bg-[#11AAA7] w-full max-w-[472px] h-[586px] rounded-[13px] px-4 sm:px-6 py-6">
                 <div className="flex flex-col gap-3 max-h-[496px] overflow-y-auto scroll-smooth pr-2 custom-scrollbar">
                   {cardData.map((card, index) => (
-                    <div className="relative" key={index}>
+                    <div className="relative w-full" key={index}>
                       <div
                         className={`${card.cardBg} w-full max-w-[399px] h-auto rounded-[13px] shadow-lg flex items-center justify-between p-2`}
                       >
-                        <div className="flex items-center justify-center m-auto ml-5">
+                        <div className="flex items-center justify-center m-auto ml-5 gap-3">
                           <div className="flex flex-col items-start justify-center gap-1 w-full max-w-[230px]">
                             {/* Top Team */}
                             <div className="flex items-center gap-3 sm:gap-4 w-full">
@@ -485,12 +485,12 @@ export default function LeagueTable() {
                                   height={38}
                                 />
                               </div>
-                              <div className="text-[#12375C] font-bold leading-[1.2] text-[clamp(12px,3.5vw,16px)]">
+                              <div className="text-[#12375C] font-bold leading-[1.2] text-[clamp(12px,3.5vw,16px)] whitespace-nowrap overflow-hidden text-ellipsis">
                                 {card.topTeam}
                               </div>
                             </div>
 
-                            {/* Divider Line */}
+                            {/* Divider */}
                             <div
                               className="w-full h-[1px]"
                               style={{ backgroundColor: card.dividerColor }}
@@ -506,27 +506,30 @@ export default function LeagueTable() {
                                   height={38}
                                 />
                               </div>
-                              <div className="text-[#12375C] font-bold leading-[1.2] text-[clamp(12px,3.5vw,16px)]">
+                              <div className="text-[#12375C] font-bold leading-[1.2] text-[clamp(12px,3.5vw,16px)] whitespace-nowrap overflow-hidden text-ellipsis">
                                 {card.bottomTeam}
                               </div>
                             </div>
                           </div>
 
+                          {/* Score Box */}
                           <div
-                            className="w-full max-w-[134px] h-[103px] sm:w-[134px] sm:h-[103px] flex items-center justify-center rounded-[13px] text-white"
+                            className="w-[110px] sm:w-[134px] h-[103px] flex items-center justify-center rounded-[13px] text-white flex-shrink-0"
                             style={{ backgroundColor: card.scoreBg }}
                           >
                             <div className="flex flex-col items-center justify-center gap-1 sm:gap-2">
-                              <div className="text-[clamp(12px,2.5vw,16px)] font-medium text-center">
+                              <div className="text-[clamp(12px,2.5vw,16px)] font-medium text-center whitespace-nowrap">
                                 {card.matchType}
                               </div>
-                              <div className="text-[clamp(20px,5vw,26px)] font-semibold text-center">
+                              <div className="text-[clamp(20px,5vw,26px)] font-semibold text-center whitespace-nowrap">
                                 {card.score}
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
+
+                      {/* V/S Badge */}
                       <div
                         className="absolute top-1/2 -translate-y-1/2"
                         style={{ left: "-18px" }}
@@ -559,38 +562,42 @@ export default function LeagueTable() {
                     </div>
                   ))}
                 </div>
+
+                {/* View All */}
                 <div className="text-[16px] text-white font-semibold cursor-pointer mt-4 flex items-center justify-center">
                   View All
                 </div>
               </div>
             </div>
 
-            <div className="bg-white w-full max-w-[797px] p-8 rounded-[19px] h-[586px] shadow-lg mx-auto mt-[60px] lg:ml-[24px] flex flex-col">
-              {/* Title */}
-              <div className="text-[24px] text-[#12375C] font-semibold flex items-center justify-center text-center">
+            <div className="bg-white w-[95%] sm:w-full max-w-[797px] p-4 sm:p-6 md:p-8 rounded-[19px] h-[586px] shadow-lg mx-auto mt-[60px] flex flex-col">
+              <div className="text-[20px] sm:text-[24px] text-[#12375C] font-semibold flex items-center justify-center text-center">
                 Watch Season 4 Highlights
               </div>
 
-              {/* Tabs */}
-              <div className="flex flex-wrap items-center gap-4 mt-4 mb-6 justify-center">
-                <div className="bg-[#C72200] w-[134px] h-[38px] flex items-center justify-center rounded-[29px] text-[16px] text-white">
-                  Latest
-                </div>
-                <div className="bg-[#EFEFEF] w-[134px] h-[38px] flex items-center justify-center rounded-[29px] text-[16px] text-[#616161]">
-                  Season 3
-                </div>
-                <div className="bg-[#EFEFEF] w-[134px] h-[38px] flex items-center justify-center rounded-[29px] text-[16px] text-[#616161]">
-                  Season 2
+              {/* Season Buttons */}
+              <div className="w-full overflow-x-auto sm:overflow-visible mt-4 mb-6">
+                <div className="flex items-center gap-3 justify-start min-w-[420px] sm:min-w-0 sm:justify-center px-2 sm:px-0">
+                  <div className="bg-[#C72200] w-[120px] h-[38px] flex items-center justify-center rounded-[29px] text-[14px] sm:text-[16px] text-white">
+                    Latest
+                  </div>
+                  <div className="bg-[#EFEFEF] w-[120px] h-[38px] flex items-center justify-center rounded-[29px] text-[14px] sm:text-[16px] text-[#616161]">
+                    Season 3
+                  </div>
+                  <div className="bg-[#EFEFEF] w-[120px] h-[38px] flex items-center justify-center rounded-[29px] text-[14px] sm:text-[16px] text-[#616161]">
+                    Season 2
+                  </div>
                 </div>
               </div>
 
-              {/* Scrollable Image Grid */}
-              <div className="overflow-y-auto flex-1 mb-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Videos Section */}
+              <div className="flex-1 mb-4 overflow-y-auto md:overflow-y-visible px-1 custom-scrollbar">
+                {/* Mobile: Scrollable vertical list | Desktop: Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
                   {[Image2, Image1, Image2, Image1].map((imgSrc, idx) => (
                     <div
-                      className="relative rounded-[12px] overflow-hidden"
                       key={idx}
+                      className="relative rounded-[12px] overflow-hidden w-full max-w-[90%] sm:max-w-[100%] md:max-w-[360px] mx-auto"
                     >
                       <Image
                         src={imgSrc}
@@ -619,7 +626,6 @@ export default function LeagueTable() {
                 </div>
               </div>
 
-              {/* View More */}
               <div className="text-[#616161] text-[16px] flex items-center justify-center font-semibold cursor-pointer">
                 View More
               </div>
