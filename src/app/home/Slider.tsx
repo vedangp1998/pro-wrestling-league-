@@ -57,6 +57,7 @@ const Slider = () => {
       <div className="relative w-full max-w-[1440px] h-[120px] sm:h-[160px] md:h-[180px] lg:h-[200px] xl:h-[220px] flex items-center justify-center overflow-hidden z-10">
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/90 pointer-events-none z-0" />
 
+        {/* Slide Images */}
         {images.map((src, index) => {
           const positionClass = getPositionClass(index);
 
@@ -82,27 +83,27 @@ const Slider = () => {
                   className="object-cover"
                 />
               </div>
-
-              {index === (currentIndex - 1 + images.length) % images.length && (
-                <button
-                  onClick={prevSlide}
-                  className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white p-2 sm:p-3 rounded-full shadow-md z-50"
-                >
-                  <ChevronLeft size={24} />
-                </button>
-              )}
-
-              {index === (currentIndex + 1) % images.length && (
-                <button
-                  onClick={nextSlide}
-                  className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white p-2 sm:p-3 rounded-full shadow-md z-50"
-                >
-                  <ChevronRight size={24} />
-                </button>
-              )}
             </div>
           );
         })}
+
+        {/* Navigation Buttons beside center image */}
+        <div className="absolute top-1/2 -translate-y-1/2 w-full flex items-center justify-center z-50 pointer-events-none">
+          <div className="flex justify-between items-center w-[240px] sm:w-[280px] md:w-[320px] lg:w-[360px] xl:w-[400px] px-2 sm:px-3 pointer-events-auto">
+            <button
+              onClick={prevSlide}
+              className="bg-black/40 hover:bg-black/60 text-white p-2 sm:p-3 rounded-full shadow-md backdrop-blur"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="bg-black/40 hover:bg-black/60 text-white p-2 sm:p-3 rounded-full shadow-md backdrop-blur"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
