@@ -1,7 +1,7 @@
 import Image from "next/image";
 import HeroImage from "../assets/Image/Hero2.svg";
-import LeagueTable from "../home/components/league-table/page";
-import LatestNews from "../home/components/latest-news/page";
+import Tabs from "./components/Tabs/Tabs";
+import LatestNews from "./components/latest-news/page";
 
 const ProWrestlingLeague = () => {
   return (
@@ -13,7 +13,18 @@ const ProWrestlingLeague = () => {
           className="object-cover w-full h-full"
           priority
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10">
+
+        {/* Gradient overlay */}
+        <div
+          className="absolute bottom-0 left-0 w-full h-[278px] z-10"
+          style={{
+            background:
+              "linear-gradient(0deg, #010203 0%, rgba(0, 0, 0, 0) 100%)",
+          }}
+        />
+
+        {/* Text overlay (above gradient and image) */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-20">
           <p className="text-[40px] font-semibold">2019</p>
           <h1 className="text-[64px] font-bold leading-tight">
             Pro Wrestling League
@@ -21,7 +32,7 @@ const ProWrestlingLeague = () => {
         </div>
       </div>
 
-      <LeagueTable />
+      <Tabs />
       <LatestNews />
     </>
   );
