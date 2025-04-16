@@ -48,7 +48,7 @@ const cardData = [
 const LatestNews = () => {
   return (
     <>
-      <div className="max-w-[1440px] w-full mx-auto px-4 sm:px-6 md:px-16 py-8 bg-[#edeff4] flex flex-col lg:flex-row gap-6">
+      <div className="max-w-[1440px] w-full mx-auto px-4 sm:px-6 md:px-16 py-16 bg-[#edeff4] flex flex-col lg:flex-row gap-6">
         <div className="max-w-[770px] w-full mx-auto space-y-6">
           <div className="relative bg-white h-auto sm:h-[56px] rounded-[5px] flex flex-col sm:flex-row items-center justify-between overflow-hidden text-center sm:text-left w-full">
             <div className="absolute left-0 top-0 h-full w-[13px] bg-[#12375C] rounded-l-[5px]" />
@@ -96,8 +96,8 @@ const LatestNews = () => {
                       className="w-full h-[180px] sm:h-[243px] object-cover rounded-t-[5px]"
                     />
                   </div>
-                  <div className="p-4 text-center">
-                    <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold mb-1 leading-[24px]">
+                  <div className="p-4 text-left">
+                    <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold mb-6 leading-[24px]">
                       {card.title}
                     </h3>
                     <p className="text-[14px] sm:text-[16px] text-black/63 mb-3 leading-[20px]">
@@ -150,35 +150,38 @@ const LatestNews = () => {
                   Saturday, October 17th, 2018
                 </div>
               </div>
-              <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-10">
-                <div className="flex flex-col items-center justify-center w-[117px] sm:w-[80px] lg:w-[99px]">
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-10">
+                {/* Team 1 */}
+                <div className="flex flex-col items-center justify-center w-[72px] sm:w-[80px] lg:w-[99px]">
                   <Image src={Team1} alt="img" className="w-full h-auto" />
-                  <div className="text-[12px] text-[#12375C] font-semibold text-center mt-2 break-words">
+                  <div className="text-[11px] sm:text-[12px] text-[#12375C] font-semibold text-center mt-2 break-words">
                     NCR Punjab Royals
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center justify-center">
-                  <div className="text-[16px] sm:text-[20px] text-[#000000] font-bold">
+                {/* VS Section */}
+                <div className="flex flex-col items-center justify-center px-2">
+                  <div className="text-[14px] sm:text-[20px] text-[#000000] font-bold">
                     VS
                   </div>
-                  <div className="text-[12px] sm:text-[14px] text-[#8d8d8d]">
+                  <div className="text-[11px] sm:text-[14px] text-[#8d8d8d]">
                     8:00 PM
                   </div>
-                  <div className="text-[12px] sm:text-[14px] text-[#8d8d8d]">
+                  <div className="text-[11px] sm:text-[14px] text-[#8d8d8d]">
                     Madison Club
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center justify-center w-[117px] sm:w-[80px] lg:w-[99px]">
+                {/* Team 2 */}
+                <div className="flex flex-col items-center justify-center w-[72px] sm:w-[80px] lg:w-[99px]">
                   <Image src={Team2} alt="img" className="w-full h-auto" />
-                  <div className="text-[12px] text-[#12375C] font-semibold text-center mt-2 break-words">
-                    Delhi Sultans{" "}
+                  <div className="text-[11px] sm:text-[12px] text-[#12375C] font-semibold text-center mt-2 break-words">
+                    Delhi Sultans
                   </div>
                 </div>
               </div>
             </div>
-            <div className="bg-white p-6 sm:p-8 m-auto flex flex-col items-center justify-center gap-6">
+            <div className="bg-white p-6 sm:p-8 m-auto flex flex-col items-center justify-center gap-5">
               <div className="text-center">
                 <div className="text-[20px] sm:text-[22px] font-bold text-[#C72200]">
                   Pro Wrestling League Quarter Finals
@@ -187,33 +190,37 @@ const LatestNews = () => {
                   Saturday, October 17th, 2018
                 </div>
               </div>
-              <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-10">
-                <div className="flex flex-col items-center justify-center w-[117px] sm:w-[80px] lg:w-[99px]">
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-10">
+                {/* Team 1 */}
+                <div className="flex flex-col items-center justify-center w-[72px] sm:w-[80px] lg:w-[99px]">
                   <Image src={Team1} alt="img" className="w-full h-auto" />
-                  <div className="text-[12px] text-[#12375C] font-semibold text-center mt-2 break-words">
+                  <div className="text-[11px] sm:text-[12px] text-[#12375C] font-semibold text-center mt-2 break-words">
                     NCR Punjab Royals
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center justify-center">
-                  <div className="text-[16px] sm:text-[20px] text-[#000000] font-bold">
+                {/* VS Section */}
+                <div className="flex flex-col items-center justify-center px-2">
+                  <div className="text-[14px] sm:text-[20px] text-[#000000] font-bold">
                     VS
                   </div>
-                  <div className="text-[12px] sm:text-[14px] text-[#8d8d8d]">
+                  <div className="text-[11px] sm:text-[14px] text-[#8d8d8d]">
                     8:00 PM
                   </div>
-                  <div className="text-[12px] sm:text-[14px] text-[#8d8d8d]">
+                  <div className="text-[11px] sm:text-[14px] text-[#8d8d8d]">
                     Madison Club
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center justify-center w-[117px] sm:w-[80px] lg:w-[99px]">
+                {/* Team 2 */}
+                <div className="flex flex-col items-center justify-center w-[72px] sm:w-[80px] lg:w-[99px]">
                   <Image src={Team2} alt="img" className="w-full h-auto" />
-                  <div className="text-[12px] text-[#12375C] font-semibold text-center mt-2 break-words">
-                    Delhi Sultans{" "}
+                  <div className="text-[11px] sm:text-[12px] text-[#12375C] font-semibold text-center mt-2 break-words">
+                    Delhi Sultans
                   </div>
                 </div>
               </div>
+
               <div className="text-white bg-[#12375C] w-full p-4 rounded-[5px] flex items-center justify-center cursor-pointer text-sm sm:text-base">
                 BUY TICKETS
               </div>
