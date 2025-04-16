@@ -3,8 +3,8 @@
 import Image from "next/image";
 import HeroImage from "../assets/Image/Hero.svg";
 import Slider from "./Slider";
-import LeagueTable from "../components/league-table/page";
-import LatestNews from "../components/latest-news/page";
+import LeagueTable from "./components/league-table/page";
+import LatestNews from "./components/latest-news/page";
 
 const HomePage = () => {
   return (
