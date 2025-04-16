@@ -570,64 +570,65 @@ export default function LeagueTable() {
               </div>
             </div>
 
-            <div className="bg-white w-[95%] sm:w-full max-w-[797px] p-4 sm:p-6 md:p-8 rounded-[19px] h-[586px] shadow-lg mx-auto mt-[60px] flex flex-col">
-              <div className="text-[20px] sm:text-[24px] text-[#12375C] font-semibold flex items-center justify-center text-center">
-                Watch Season 4 Highlights
-              </div>
-
-              {/* Season Buttons */}
-              <div className="w-full overflow-x-auto sm:overflow-visible mt-4 mb-6">
-                <div className="flex items-center gap-3 justify-start min-w-[420px] sm:min-w-0 sm:justify-center px-2 sm:px-0">
-                  <div className="bg-[#C72200] w-[120px] h-[38px] flex items-center justify-center rounded-[29px] text-[14px] sm:text-[16px] text-white">
-                    Latest
-                  </div>
-                  <div className="bg-[#EFEFEF] w-[120px] h-[38px] flex items-center justify-center rounded-[29px] text-[14px] sm:text-[16px] text-[#616161]">
-                    Season 3
-                  </div>
-                  <div className="bg-[#EFEFEF] w-[120px] h-[38px] flex items-center justify-center rounded-[29px] text-[14px] sm:text-[16px] text-[#616161]">
-                    Season 2
-                  </div>
+            <div className="px-6">
+              <div className="bg-white w-[80%] sm:w-full max-w-[797px] p-4 sm:p-6 md:p-8 rounded-[19px] h-[586px] shadow-lg mx-auto mt-[60px] flex flex-col">
+                <div className="text-[20px] sm:text-[24px] text-[#12375C] font-semibold flex items-center justify-center text-center">
+                  Watch Season 4 Highlights
                 </div>
-              </div>
 
-              {/* Videos Section */}
-              <div className="flex-1 mb-4 overflow-y-auto md:overflow-y-visible px-1 custom-scrollbar">
-                {/* Mobile: Scrollable vertical list | Desktop: Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-                  {[Image2, Image1, Image2, Image1].map((imgSrc, idx) => (
-                    <div
-                      key={idx}
-                      className="relative rounded-[12px] overflow-hidden w-full max-w-[90%] sm:max-w-[100%] md:max-w-[360px] mx-auto"
-                    >
-                      <Image
-                        src={imgSrc}
-                        alt="Sarita vs Geeta wrestling match"
-                        className="w-full h-auto object-cover"
-                        width={365}
-                        height={181}
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="bg-[rgba(235,234,234,0.61)] rounded-full w-[34px] h-[34px] m-auto flex items-center justify-center cursor-pointer">
-                          <Image
-                            src={PlayIcon}
-                            alt="icon"
-                            width={13}
-                            height={13}
-                          />
-                        </div>
-                      </div>
-                      <div className="absolute bottom-0 left-6">
-                        <div className="trapezoid-footer bg-red-600 text-white text-[12px] w-[152px] h-[30px] flex items-center justify-center">
-                          Sarita vs Geeta
-                        </div>
-                      </div>
+                {/* Season Buttons */}
+                <div className="w-full overflow-x-auto sm:overflow-visible mt-4 mb-6">
+                  <div className="flex items-center gap-3 justify-start min-w-[420px] sm:min-w-0 sm:justify-center px-2 sm:px-0">
+                    <div className="bg-[#C72200] w-[120px] h-[38px] flex items-center justify-center rounded-[29px] text-[14px] sm:text-[16px] text-white">
+                      Latest
                     </div>
-                  ))}
+                    <div className="bg-[#EFEFEF] w-[120px] h-[38px] flex items-center justify-center rounded-[29px] text-[14px] sm:text-[16px] text-[#616161]">
+                      Season 3
+                    </div>
+                    <div className="bg-[#EFEFEF] w-[120px] h-[38px] flex items-center justify-center rounded-[29px] text-[14px] sm:text-[16px] text-[#616161]">
+                      Season 2
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div className="text-[#616161] text-[16px] flex items-center justify-center font-semibold cursor-pointer">
-                View More
+                {/* Videos Section */}
+                <div className="flex-1 mb-4 overflow-y-auto md:overflow-y-visible px-1 custom-scrollbar">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                    {[Image2, Image1, Image2, Image1].map((imgSrc, idx) => (
+                      <div
+                        key={idx}
+                        className="relative rounded-[12px] overflow-hidden w-full max-w-[90%] sm:max-w-[100%] md:max-w-[360px] mx-auto"
+                      >
+                        <Image
+                          src={imgSrc}
+                          alt="Sarita vs Geeta wrestling match"
+                          className="w-full h-auto object-cover"
+                          width={365}
+                          height={181}
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="bg-[rgba(235,234,234,0.61)] rounded-full w-[34px] h-[34px] m-auto flex items-center justify-center cursor-pointer">
+                            <Image
+                              src={PlayIcon}
+                              alt="icon"
+                              width={13}
+                              height={13}
+                            />
+                          </div>
+                        </div>
+                        <div className="absolute bottom-0 left-6">
+                          <div className="trapezoid-footer bg-red-600 text-white text-[12px] w-[152px] h-[30px] flex items-center justify-center">
+                            Sarita vs Geeta
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="text-[#616161] text-[16px] flex items-center justify-center font-semibold cursor-pointer">
+                  View More
+                </div>
               </div>
             </div>
           </div>
