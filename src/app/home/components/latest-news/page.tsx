@@ -143,7 +143,7 @@ const LatestNews = () => {
             </div>
             <div className="bg-white p-6 sm:p-8 m-auto flex flex-col items-center justify-center gap-6 border-b-[0.5px] border-[#12375C]">
               <div className="text-center">
-                <div className="text-[20px] sm:text-[22px] font-bold">
+                <div className="text-[20px] sm:text-[22px] font-bold text-black">
                   Pro Wrestling League Quarter Finals
                 </div>
                 <div className="text-[14px] sm:text-[16px] text-[#8d8d8d]">
@@ -226,28 +226,36 @@ const LatestNews = () => {
               </div>
               <div className="flex flex-wrap items-start justify-center gap-2 sm:gap-4 text-center">
                 <div>
-                  <div className="text-[20px] sm:text-[24px] font-bold">00</div>
+                  <div className="text-[20px] sm:text-[24px] font-bold text-black">
+                    00
+                  </div>
                   <div className="text-[12px] sm:text-[14px] text-[#8D8D8D]">
                     DAYS
                   </div>
                 </div>
                 <div className="font-bold">:</div>
                 <div>
-                  <div className="text-[20px] sm:text-[24px] font-bold">00</div>
+                  <div className="text-[20px] sm:text-[24px] font-bold text-black">
+                    00
+                  </div>
                   <div className="text-[12px] sm:text-[14px] text-[#8D8D8D]">
                     HOURS
                   </div>
                 </div>
                 <div className="font-bold">:</div>
                 <div>
-                  <div className="text-[20px] sm:text-[24px] font-bold">00</div>
+                  <div className="text-[20px] sm:text-[24px] font-bold text-black">
+                    00
+                  </div>
                   <div className="text-[12px] sm:text-[14px] text-[#8D8D8D]">
                     MINS
                   </div>
                 </div>
                 <div className="font-bold">:</div>
                 <div>
-                  <div className="text-[20px] sm:text-[24px] font-bold">00</div>
+                  <div className="text-[20px] sm:text-[24px] font-bold text-black">
+                    00
+                  </div>
                   <div className="text-[12px] sm:text-[14px] text-[#8D8D8D]">
                     SECS
                   </div>
