@@ -96,7 +96,7 @@ const LatestNews = () => {
                       className="w-full h-[180px] sm:h-[243px] object-cover rounded-t-[5px]"
                     />
                   </div>
-                  <div className="p-4 text-left">
+                  <div className="p-4 text-left text-black">
                     <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold mb-6 leading-[24px]">
                       {card.title}
                     </h3>
