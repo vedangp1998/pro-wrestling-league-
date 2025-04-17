@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "../../assets/Logos/Logo.svg";
 import YoutubeIcon from "../../assets/Icons/Youtuber.svg";
 import RectangleIcon from "../../assets/Icons/Rectangle.svg";
@@ -9,18 +10,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const Navlinks = [
-  "Home",
-  "About Us",
-  "Pro Wrestling League",
-  "Star Cast",
-  "News",
-  "Gallery",
-  "Video",
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Pro Wrestling League", href: "/pro-wrestling-league" },
+  { label: "Star Cast", href: "/starcast" },
+  { label: "News", href: "/news" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Video", href: "/video" },
 ];
 
 const Header = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const navRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const navRefs = useRef<Array<HTMLAnchorElement | null>>([]);
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -37,7 +38,6 @@ const Header = () => {
   return (
     <header className="relative w-full bg-[#12375c] h-[103px] z-[50] overflow-visible">
       <div className="relative max-w-[1440px] mx-auto w-full h-full px-4 sm:px-0">
-        {/* Top Line */}
         <div className="w-full flex justify-end items-center gap-6 pt-2 pr-2 sm:pr-12 overflow-hidden">
           <div className="text-white text-[10px] sm:text-xs md:text-sm lg:text-base whitespace-nowrap truncate animate-marquee">
             Watch Haryana Hammers vs MP Yodha Live On 16 April (SonySix,
@@ -52,9 +52,7 @@ const Header = () => {
           />
         </div>
 
-        {/* Main Row */}
         <div className="flex justify-between items-end h-[calc(103px-2rem)] mt-1">
-          {/* Logo */}
           <div className="flex flex-col items-center lg:ml-[50px] md:ml-[30px] sm:ml-[20px] mt-[-8px]">
             <div className="w-[90px] sm:w-[120px] md:w-[148px] h-auto mb-[-6px]">
               <Image
@@ -77,7 +75,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Navigation */}
           <div className="flex flex-col items-end justify-end h-full relative">
             <div
               className="hidden lg:flex bg-[#C72200] items-center h-[61px] relative mt-auto mb-[-10px] mr-0 w-full"
@@ -92,8 +89,9 @@ const Header = () => {
               />
               <nav className="flex items-center gap-x-4 sm:gap-x-6 md:gap-x-10 px-4 sm:px-6 lg:px-12 z-20 h-full whitespace-nowrap overflow-x-auto w-full">
                 {Navlinks.map((item, index) => (
-                  <button
+                  <Link
                     key={index}
+                    href={item.href}
                     ref={(el) => {
                       navRefs.current[index] = el;
                     }}
@@ -101,13 +99,12 @@ const Header = () => {
                     className="text-white text-[12px] sm:text-sm md:text-base font-medium flex-shrink-0 h-full flex items-center"
                     style={{ letterSpacing: "0.02em" }}
                   >
-                    {item}
-                  </button>
+                    {item.label}
+                  </Link>
                 ))}
               </nav>
             </div>
 
-            {/* Hamburger */}
             <button
               className="lg:hidden my-4 mx-2 text-white z-[60]"
               onClick={() => setIsMobileMenuOpen(true)}
@@ -117,11 +114,9 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Drawer */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <>
-              {/* Slide Panel */}
               <motion.div
                 initial={{ x: "100%" }}
                 animate={{ x: 0 }}
@@ -139,7 +134,7 @@ const Header = () => {
                 </div>
                 <nav className="flex flex-col gap-4 mt-4">
                   {Navlinks.map((item, index) => (
-                    <motion.button
+                    <motion.div
                       key={index}
                       whileHover={{
                         scale: 1.1,
@@ -159,19 +154,22 @@ const Header = () => {
                           damping: 20,
                         },
                       }}
-                      onClick={() => {
-                        setActiveIndex(index);
-                        setIsMobileMenuOpen(false);
-                      }}
-                      className="text-white text-lg font-medium text-left origin-left"
                     >
-                      {item}
-                    </motion.button>
+                      <Link
+                        href={item.href}
+                        onClick={() => {
+                          setActiveIndex(index);
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className="text-white text-lg font-medium text-left origin-left block w-full"
+                      >
+                        {item.label}
+                      </Link>
+                    </motion.div>
                   ))}
                 </nav>
               </motion.div>
 
-              {/* Backdrop */}
               <motion.div
                 className="fixed inset-0 bg-black z-[90]"
                 initial={{ opacity: 0 }}
