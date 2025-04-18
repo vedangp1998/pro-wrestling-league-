@@ -9,7 +9,7 @@ import LatestNews from "./components/latest-news/page";
 const HomePage = () => {
   return (
     <>
-      <div className="relative w-full max-h-[600px] h-[600px] overflow-hidden z-0">
+      <div className="relative w-full max-h-[600px] h-[600px] overflow-hidden -z-[50]">
         <Image
           src={HeroImage}
           alt="Hero-Image"

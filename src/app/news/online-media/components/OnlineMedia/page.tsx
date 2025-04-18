@@ -1,15 +1,16 @@
+"use-client";
 import Image from "next/image";
 import React from "react";
-import Image1 from "../../../assets/Image/news-image/USATSI_23517759 8.png";
-import Image2 from "../../../assets/Image/news-image/Rectangle 186.svg";
-import Image3 from "../../../assets/Image/news-image/Rectangle 187.svg";
-import Banner from "../../../assets/Image/Banner-3.svg";
-import Team1 from "../../../assets/Icons/Teams/Punjab Royals NCR Logo copy 2.svg";
-import Team2 from "../../../assets/Icons/Teams/Colors-Delhi-Sultan-Logo 1.svg";
-import Social1 from "../../../assets/Logos/Facebook.svg";
-import Social2 from "../../../assets/Logos/Twitter.svg";
-import News1 from "../../../assets/Image/news-image/Rectangle 211.svg";
-import News2 from "../../../assets/Image/news-image/Rectangle 214.svg";
+import Image1 from "../../../../assets/Image/news-image/USATSI_23517759 8.png";
+import Image2 from "../../../../assets/Image/news-image/Rectangle 186.svg";
+import Image3 from "../../../../assets/Image/news-image/Rectangle 187.svg";
+import Banner from "../../../../assets/Image/Banner-3.svg";
+import Team1 from "../../../../assets/Icons/Teams/Punjab Royals NCR Logo copy 2.svg";
+import Team2 from "../../../../assets/Icons/Teams/Colors-Delhi-Sultan-Logo 1.svg";
+import Social1 from "../../../../assets/Logos/Facebook.svg";
+import Social2 from "../../../../assets/Logos/Twitter.svg";
+import News1 from "../../../../assets/Image/news-image/Rectangle 211.svg";
+import News2 from "../../../../assets/Image/news-image/Rectangle 214.svg";
 
 import { ArrowRight } from "lucide-react";
 
@@ -80,7 +81,7 @@ const cardData = [
   },
 ];
 
-const LatestNews = () => {
+const OnlineMediaPage = () => {
   return (
     <>
       <div className="max-w-[1440px] w-full mx-auto px-4 sm:px-6 md:px-16 py-16 bg-[#edeff4] flex flex-col lg:flex-row gap-6">
@@ -132,7 +133,7 @@ const LatestNews = () => {
                     />
                   </div>
                   <div className="p-4 text-left text-black">
-                    <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold mb-6 leading-[24px]">
+                    <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold mb-6 leading-[24px] text-black">
                       {card.title}
                     </h3>
                     <p className="text-[14px] sm:text-[16px] text-black/63 mb-3 leading-[20px]">
@@ -382,4 +383,4 @@ const LatestNews = () => {
   );
 };
 
-export default LatestNews;
+export default OnlineMediaPage;

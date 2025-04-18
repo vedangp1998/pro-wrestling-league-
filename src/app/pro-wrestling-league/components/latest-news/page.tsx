@@ -110,7 +110,7 @@ const LatestNews = () => {
                 />
               </div>
               <div className="p-4 text-left">
-                <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold mb-6 leading-[24px]">
+                <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold mb-6 leading-[24px] text-black">
                   {card.title}
                 </h3>
                 <p className="text-[14px] sm:text-[16px] text-black/63 mb-3 leading-[20px]">
