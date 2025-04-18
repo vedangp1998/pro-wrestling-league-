@@ -1,8 +1,8 @@
 import Image from "next/image";
-import HeroImage from "../assets/Image/Hero3.svg";
-import Starcast from "./components/starcast/page";
+import HeroImage from "../../assets/Image/Hero3.svg";
+import PrintMediaContent from "./components/PrintMediaPage/page";
 
-const StarCast = () => {
+const PrintMediaPage = () => {
   return (
     <>
       <div className="relative w-full max-h-[600px] h-[600px] overflow-hidden z-0">
@@ -24,14 +24,14 @@ const StarCast = () => {
 
         {/* Text overlay (above gradient and image) */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-20">
-          <p className="text-[40px] font-semibold">Wrestling</p>
-          <h1 className="text-[64px] font-bold leading-tight">Star Cast </h1>
+          <p className="text-[40px] font-semibold">2019</p>
+          <h1 className="text-[64px] font-bold leading-tight">Print Media </h1>
         </div>
       </div>
 
-      <Starcast />
+      <PrintMediaContent />
     </>
   );
 };
 
-export default StarCast;
+export default PrintMediaPage;
