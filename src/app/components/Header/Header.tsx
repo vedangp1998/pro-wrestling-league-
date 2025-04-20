@@ -11,7 +11,7 @@ import { Menu, X } from "lucide-react";
 
 const Navlinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
+  { label: "About Us", href: "/aboutus" },
   { label: "Pro Wrestling League", href: "/pro-wrestling-league" },
   { label: "Star Cast", href: "/starcast" },
   { label: "News", href: "/news" },
