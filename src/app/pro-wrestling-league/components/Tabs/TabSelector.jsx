@@ -65,7 +65,7 @@ export default function TabSelector() {
         ))}
       </div>
 
-      <div className="mt-6 w-full max-w-5xl">{renderContent()}</div>
+      <div className="mt-6 w-full max-w-[1440px]">{renderContent()}</div>
     </div>
   );
 }
