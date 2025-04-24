@@ -50,17 +50,26 @@ const LatestNews = () => {
     <>
       <div className="max-w-[1440px] w-full mx-auto px-4 sm:px-6 md:px-16 py-16 bg-[#edeff4] flex flex-col lg:flex-row gap-6">
         <div className="max-w-[770px] w-full mx-auto space-y-6">
-          <div className="relative bg-white h-auto sm:h-[56px] rounded-[5px] flex flex-col sm:flex-row items-center justify-between overflow-hidden text-center sm:text-left w-full">
-            <div className="absolute left-0 top-0 h-full w-[13px] bg-[#12375C] rounded-l-[5px]" />
+          <div className="relative bg-white h-auto min-h-[48px] sm:min-h-[56px] rounded-md flex flex-col sm:flex-row items-center justify-between overflow-hidden text-left w-full max-w-7xl mx-auto px-2 sm:px-4">
+            {/* Colored strip */}
+            <div className="absolute left-0 top-0 h-full w-2 sm:w-3 bg-[#12375C] rounded-l-md" />
 
-            <div className="w-full sm:w-auto text-[20px] sm:text-[24px] text-[#12375C] font-semibold ml-0 sm:ml-8 mt-2 sm:mt-0">
+            {/* Title */}
+            <div className="text-base sm:text-lg md:text-xl text-[#12375C] font-semibold ml-4 sm:ml-6 md:ml-8 whitespace-nowrap mt-2 sm:mt-0">
               PWL Season 4 2025 Latest News
             </div>
 
-            <div className="flex justify-center sm:justify-between items-center gap-3 sm:gap-6 w-full sm:w-auto px-2 sm:pr-4 text-[16px] sm:text-[20px] mt-2 sm:mt-0">
-              <div className="text-[#000000]">Newest</div>
-              <div className="text-[#8D8D8D]">Popular</div>
-              <div className="text-[#8D8D8D]">View All</div>
+            {/* Navigation links */}
+            <div className="flex items-center gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 text-xs sm:text-sm md:text-base whitespace-nowrap mb-2 sm:mb-0">
+              <div className="text-[#000000] hover:text-[#12375C] cursor-pointer">
+                Newest
+              </div>
+              <div className="text-[#8D8D8D] hover:text-[#12375C] cursor-pointer">
+                Popular
+              </div>
+              <div className="text-[#8D8D8D] hover:text-[#12375C] cursor-pointer">
+                View All
+              </div>
             </div>
           </div>
 

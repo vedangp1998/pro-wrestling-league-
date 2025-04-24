@@ -9,15 +9,15 @@ import LatestNews from "./components/latest-news/page";
 const HomePage = () => {
   return (
     <>
-      <div className="relative w-full max-h-[600px] h-[600px] overflow-hidden -z-[50]">
+      <div className="relative w-full max-h-[600px] h-[600px] overflow-hidden z-[10]">
         <Image
-          src={HeroImage}
+          src={HeroImage || "/placeholder.svg?height=600&width=1200"}
           alt="Hero-Image"
           className="object-cover w-full h-full"
           priority
         />
 
-        <div className="absolute bottom-[-20px] w-full px-4 z-10">
+        <div className="absolute bottom-[-20px] w-full px-4 z-[20]">
           <Slider />
         </div>
       </div>

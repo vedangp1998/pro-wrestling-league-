@@ -25,7 +25,7 @@ const OnlineMedia = () => {
         {/* Text overlay (above gradient and image) */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-20">
           <p className="text-[40px] font-semibold">2019</p>
-          <h1 className="text-[64px] font-bold leading-tight">OnlineMedia </h1>
+          <h1 className="text-[64px] font-bold leading-tight">Online Media </h1>
         </div>
       </div>
 
