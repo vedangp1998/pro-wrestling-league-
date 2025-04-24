@@ -244,7 +244,7 @@ const Header = () => {
                   animate={{ x: 0 }}
                   exit={{ x: "100%" }}
                   transition={{ type: "tween", duration: 0.3 }}
-                  className="fixed top-0 right-0 h-full w-[80%] sm:w-[70%] max-w-[320px] bg-[#C72200] z-[1000] shadow-lg p-5 flex flex-col"
+                  className="fixed top-0 right-0 h-full w-[80%] sm:w-[70%] max-w-[240px] bg-[#C72200] z-[1000] shadow-lg p-5 flex flex-col"
                 >
                   <div className="flex justify-end mb-4">
                     <button
