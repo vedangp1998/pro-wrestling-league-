@@ -42,11 +42,27 @@ const Header = () => {
         const parentRect =
           current.parentElement?.parentElement?.getBoundingClientRect();
         if (parentRect) {
-          setUnderlineStyle({
+          const newStyle = {
             left: rect.left - parentRect.left,
             width: rect.width,
-          });
+          };
+          setUnderlineStyle(newStyle);
+          console.log(
+            "Underline updated:",
+            newStyle,
+            "for activeIndex:",
+            activeIndex,
+            "label:",
+            Navlinks[activeIndex].label
+          );
+        } else {
+          console.log("Parent rect not found for activeIndex:", activeIndex);
         }
+      } else {
+        console.log(
+          "navRefs.current[activeIndex] is null for activeIndex:",
+          activeIndex
+        );
       }
     };
 
@@ -55,22 +71,18 @@ const Header = () => {
     return () => window.removeEventListener("resize", updateUnderline);
   }, [activeIndex]);
 
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      setHoveredIndex(null);
-    }
-  }, [isMobileMenuOpen]);
-
   const handleMouseEnter = (index: number) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     setHoveredIndex(index);
+    console.log("Mouse entered, hoveredIndex set to:", index);
   };
 
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setHoveredIndex(null);
+      console.log("Mouse left, hoveredIndex reset to null");
     }, 200);
   };
 
@@ -100,6 +112,14 @@ const Header = () => {
                         key={childIndex}
                         href={child.href}
                         className="text-white text-[12px] sm:text-sm md:text-base font-medium block px-4 py-2 hover:bg-[#a51c00] transition-colors duration-200"
+                        onClick={() => {
+                          setActiveIndex(index);
+                          setHoveredIndex(null);
+                          console.log(
+                            "Child link clicked, setting activeIndex to parent:",
+                            index
+                          );
+                        }}
                       >
                         {child.label}
                       </Link>
@@ -176,8 +196,24 @@ const Header = () => {
                         href={item.href}
                         ref={(el) => {
                           navRefs.current[index] = el;
+                          console.log(
+                            "navRefs set for index:",
+                            index,
+                            "label:",
+                            item.label,
+                            "element:",
+                            el
+                          );
                         }}
-                        onClick={() => setActiveIndex(index)}
+                        onClick={() => {
+                          setActiveIndex(index);
+                          console.log(
+                            "Parent link clicked, activeIndex set to:",
+                            index,
+                            "label:",
+                            item.label
+                          );
+                        }}
                         className="text-white text-[12px] sm:text-sm md:text-base font-medium flex-shrink-0 h-full flex items-center gap-1 relative z-20"
                         style={{ letterSpacing: "0.02em" }}
                       >
@@ -244,6 +280,12 @@ const Header = () => {
                             href={item.href}
                             onClick={() => {
                               setActiveIndex(index);
+                              console.log(
+                                "Parent link clicked in mobile, activeIndex set to:",
+                                index,
+                                "label:",
+                                item.label
+                              );
                               if (!item.children) {
                                 setIsMobileMenuOpen(false);
                               }
@@ -258,6 +300,12 @@ const Header = () => {
                                 const newIndex =
                                   hoveredIndex === index ? null : index;
                                 setHoveredIndex(newIndex as number | null);
+                                console.log(
+                                  "Dropdown toggled, hoveredIndex set to:",
+                                  newIndex,
+                                  "label:",
+                                  item.label
+                                );
                               }}
                               className="text-white p-1"
                             >
@@ -277,7 +325,19 @@ const Header = () => {
                               <Link
                                 key={childIndex}
                                 href={child.href}
-                                onClick={() => setIsMobileMenuOpen(false)}
+                                onClick={() => {
+                                  console.log(
+                                    "Child link clicked:",
+                                    child.label,
+                                    "setting activeIndex to:",
+                                    index,
+                                    "parent label:",
+                                    item.label
+                                  );
+                                  setHoveredIndex(null);
+                                  setActiveIndex(index);
+                                  setIsMobileMenuOpen(false);
+                                }}
                                 className="text-white text-sm block py-1 hover:translate-x-1 transition-transform duration-200"
                               >
                                 {child.label}
